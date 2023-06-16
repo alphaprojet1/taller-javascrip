@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 2</title>
+    <link rel="stylesheet" href="../bootstrap.min.css">
+    <style>
+            body {
+            background: linear-gradient(to bottom, #83a4d4, #b6fbff);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 500px;
+            padding: 2rem;
+        }
+
+        .card {
+            width: 20rem;
+            padding: 2rem;
+            border-radius: 1rem;
+            font-size: 1rem;
+            color: rgb(255, 255, 255);
+            background-color: #393753a1;
+        }
+
+        h3 {
+            margin-bottom: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-label {
+            font-weight: bold;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            border: 1px solid #ccc;
+        }
+
+        .btn {
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+        }
+
+        .resultado-container {
+            margin-top: 1rem;
+        }
+
+        .resultado-container p {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="m-4">
+          
+        <div class="m-4">
+            <h3>Comparador de valores</h3>
+
+            <div class="form-group my-2">
+                <label class="form-label">Ingrese los datos</label>
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="valorA" placeholder="Valor A"
+                        data-listener-added_5f298116="true">
+                    <label for="radio">Valor A</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="valorB" placeholder="Valor B"
+                        data-listener-added_5f298116="true">
+                    <label for="altura">Valor B</label>
+                </div>
+                <div class="form-floating">
+                    <input type="number" class="form-control" id="valorC" placeholder="Valor C"
+                        data-listener-added_5f298116="true">
+                    <label for="altura">Valor C</label>
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-primary btn-lg" onclick="compararValores()">Calcular</button>
+        </form>
+    </div>
+    <br>
+    <div>
+        <div class="resultado-container my-3">
+                <p class="col-sm-2">Resultado:</p>
+                <div class="col-sm-10">
+                    <p><span id="resultado"></span></p>
+                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

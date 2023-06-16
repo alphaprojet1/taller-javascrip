@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Comparador de Valores</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background: linear-gradient(to bottom, #83a4d4, #b6fbff);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 500px;
+            padding: 2rem;
+        } 
+        .card{ 
+            width: 20rem;
+            padding: 2rem;
+            border-radius: 1rem;
+            font-size: 1rem;
+            color: rgb(255, 255, 255);
+            background-color: #393753a1;
+        }
+
+        h3 {
+            margin-bottom: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-label {
+            font-weight: bold;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            border: 1px solid #ccc;
+        }
+
+        .btn {
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+        }
+
+        .resultado-container {
+            margin-top: 1rem;
+        }
+
+        .resultado-container p {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+
+            <div class="col-lg-6">
+                <div class="card">
+
+                    <h1 class="card-title">Comparador de Valores</h1>
+
+                    <form>
+                        <div class="form-group my-2">
+                            <label class="form-label" for="valorA">Ingrese los datos</label>
+                            <div>
+                                <br>
+                                <div class="form-floating mb-3">
+                                    <input type="number" class="form-control" id="valorA" placeholder="Valor A">
+                                    <label for="valorA">Valor A</label>
+                                </div>
+                                <br>
+                                <div class="form-floating mb-3">
+                                    <input type="number" class="form-control" id="valorB" placeholder="Valor B">
+                                    <label for="valorB">Valor B</label>
+                                </div>
+                                <br>
+                                <div class="form-floating">
+                                    <input type="number" class="form-control" id="valorC" placeholder="Valor C">
+                                    <label for="valorC">Valor C</label>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <button type="button" class="btn btn-primary btn-lg"
+                            onclick="compararValores()">Calcular</button>
+                    </form>
+                    <br>
+                    <div class="resultado-container my-3">
+
+                        <div class="row">
+                            <p class="col-sm-2">Resultado:</p>
+                            <div>
+                                <span id="resultado"></span>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        function compararValores() {
+            var valorA = parseFloat(document.getElementById("valorA").value);
+            var valorB = parseFloat(document.getElementById("valorB").value);
+            var valorC = parseFloat(document.getElementById("valorC").value);
+
+            var resultado = "";
+
+            if (valorA > valorB && valorA > valorC) {
+                resultado = "Valor A es el mayor";
+            } else if (valorB > valorA && valorB > valorC) {
+                resultado = "Valor B es el mayor";
+            } else if (valorC > valorA && valorC > valorB) {
+                resultado = "Valor C es el mayor";
+            } else {
+                resultado = "Hay valores iguales";
+            }
+
+            document.getElementById("resultado").textContent = resultado;
+        }
+    </script>
+</body>
+
+</html>

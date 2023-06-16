@@ -1,0 +1,21 @@
+body
+{
+    background: rgb(172, 183, 201);
+  
+}
+header{
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+footer img {
+    width: 40px;
+    height: 40px;
+}
+
+.text-justify {
+    text-align: justify;
+  }
